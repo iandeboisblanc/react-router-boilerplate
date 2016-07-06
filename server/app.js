@@ -13,3 +13,7 @@ console.log('Node environment:', ENV)
 console.log('Server listening on port', PORT);
 
 app.use(express.static(__dirname + '/../client/dist'));
+
+app.get('*',(req, res) => {
+  res.sendFile(path.resolve(__dirname + '/../client/dist/index.html'))
+});
