@@ -8,4 +8,8 @@ var ENV = process.env.NODE_ENV || 'development';
 
 server.listen(PORT); // change for production
 
+// server.listen(app.get('port'));
+console.log('Node environment:', ENV)
+console.log('Server listening on port', PORT);
+
 app.use(express.static(__dirname + '/../client/dist'));
